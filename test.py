@@ -1,3 +1,3 @@
-print "ahoy"
+print ("ahoy")
 
-print "suh"
+print ("suh")
