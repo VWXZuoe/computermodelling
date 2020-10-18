@@ -11,14 +11,14 @@ numbers = [random.randint(0,100) for n in range(20)]
 print("Original list:")
 print(numbers)
 
+oddnums = []
+
 for i in range(len(numbers)):
     # if remainder of division by 2 is zero, delete list entry
-    if numbers[i]%2==0:
-        del numbers[i]
-    print (numbers)
-    print (i)
+    if numbers[i]%2!=0:
+        oddnums.append(numbers[i])
 
 
 # Print the remaining list with all odd numbers
 print("Odd entries:")
-print(numbers)
+print(oddnums)
