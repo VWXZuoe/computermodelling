@@ -1,5 +1,9 @@
 """
-Vector operations codified to be imported to other programs
+
+Jude Ferrier - s1808200 - 31/10/20
+Ex 1.
+A module that provides functions to use with 3-dimensional vectors
+
 """
 import math
 
@@ -70,30 +74,34 @@ def dot(a, b):
     :param b: second vector (b1, b2, b3)
     :return: scalar product
     """
-    return [a[0]*b[0] + a[1]*b[1] + a[2]*b[2]]
+    return float(a[0]*b[0] + a[1]*b[1] + a[2]*b[2])
 
 def cross(a, b):
     """
     Vector product of 2 vectors
+    Calculates 3d cross product (a x b) term by term
 
     :param a: first vector (a1, a2, a3)
     :param b: second vector (b1, b2, b3)
-    calculate 3d cross product term by term
     :return: cross product (c1, c2, c3)
     """
-    c[0]=a[1]*b[2]-b[1]*a[2]
-    c[1]=a[2]*b[0]-b[2]*a[0]
-    c[2]=a[0]*b[1]-b[0]*a[1]
-    return c
+    z = []
+    z.append((a[1]*b[2]) - (b[1]*a[2]))
+    z.append((a[2]*b[0]) - (b[2]*a[0]))
+    z.append((a[0]*b[1]) - (b[0]*a[1]))
+    return z
 
 def dup(a, b):
     """
-    Check if 2 vectors are the same
+    Check if 2 vectors are within a low tolerance (+/- 0.0000001) of each other
+    This tolerance is set such as to account for rounding differences but be able to detect whether the results are close
+    enough to be the same vector
 
     :param a: first vector (a1, a2, a3)
     :param b: second vector (b1, b2, b3)
     :return: equal or not equal
     """
-    if sub (a, b)==[0, 0, 0]
+    if math.isclose(a[0], b[0], abs_tol=0.0000001) and math.isclose(a[1], b[1], abs_tol=0.0000001) and math.isclose(a[2], b[2], abs_tol=0.0000001):
         print ("equal")
-        else print ("not equal")
+    else:
+        print ("not equal")

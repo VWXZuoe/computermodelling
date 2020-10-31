@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module vector</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>vector</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cjvfer%5Cdocuments%5Ccomputermodelling%5Ccomputermodelling%5Cex1%5Cvector.py">c:\users\jvfer\documents\computermodelling\computermodelling\ex1\vector.py</a></font></td></tr></table>
+    <p><tt>Jude&nbsp;Ferrier&nbsp;-&nbsp;s1808200&nbsp;-&nbsp;31/10/20<br>
+Ex&nbsp;1.<br>
+A&nbsp;module&nbsp;that&nbsp;provides&nbsp;functions&nbsp;to&nbsp;use&nbsp;with&nbsp;3-dimensional&nbsp;vectors</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="math.html">math</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-cross"><strong>cross</strong></a>(a, b)</dt><dd><tt>Vector&nbsp;product&nbsp;of&nbsp;2&nbsp;vectors<br>
+Calculates&nbsp;3d&nbsp;cross&nbsp;product&nbsp;(a&nbsp;x&nbsp;b)&nbsp;term&nbsp;by&nbsp;term<br>
+&nbsp;<br>
+:param&nbsp;a:&nbsp;first&nbsp;vector&nbsp;(a1,&nbsp;a2,&nbsp;a3)<br>
+:param&nbsp;b:&nbsp;second&nbsp;vector&nbsp;(b1,&nbsp;b2,&nbsp;b3)<br>
+:return:&nbsp;cross&nbsp;product&nbsp;(c1,&nbsp;c2,&nbsp;c3)</tt></dd></dl>
+ <dl><dt><a name="-div"><strong>div</strong></a>(a, scalar)</dt><dd><tt>Division&nbsp;of&nbsp;vector&nbsp;by&nbsp;a&nbsp;scalar<br>
+&nbsp;<br>
+:param&nbsp;a:&nbsp;vector&nbsp;(a1,&nbsp;a2,&nbsp;a3)<br>
+:param&nbsp;scalar:&nbsp;scalar&nbsp;factor<br>
+:return:&nbsp;scaled&nbsp;vector&nbsp;(a1/scalar,&nbsp;a2/scalar,&nbsp;a3/scalar)</tt></dd></dl>
+ <dl><dt><a name="-dot"><strong>dot</strong></a>(a, b)</dt><dd><tt>Scalar&nbsp;product&nbsp;of&nbsp;2&nbsp;vectors<br>
+&nbsp;<br>
+:param&nbsp;a:&nbsp;first&nbsp;vector&nbsp;(a1,&nbsp;a2,&nbsp;a3)<br>
+:param&nbsp;b:&nbsp;second&nbsp;vector&nbsp;(b1,&nbsp;b2,&nbsp;b3)<br>
+:return:&nbsp;scalar&nbsp;product</tt></dd></dl>
+ <dl><dt><a name="-dup"><strong>dup</strong></a>(a, b)</dt><dd><tt>Check&nbsp;if&nbsp;2&nbsp;vectors&nbsp;are&nbsp;within&nbsp;a&nbsp;low&nbsp;tolerance&nbsp;(+/-&nbsp;0.0000001)&nbsp;of&nbsp;each&nbsp;other<br>
+This&nbsp;tolerance&nbsp;is&nbsp;set&nbsp;such&nbsp;as&nbsp;to&nbsp;account&nbsp;for&nbsp;rounding&nbsp;differences&nbsp;but&nbsp;be&nbsp;able&nbsp;to&nbsp;detect&nbsp;whether&nbsp;the&nbsp;results&nbsp;are&nbsp;close<br>
+enough&nbsp;to&nbsp;be&nbsp;the&nbsp;same&nbsp;vector<br>
+&nbsp;<br>
+:param&nbsp;a:&nbsp;first&nbsp;vector&nbsp;(a1,&nbsp;a2,&nbsp;a3)<br>
+:param&nbsp;b:&nbsp;second&nbsp;vector&nbsp;(b1,&nbsp;b2,&nbsp;b3)<br>
+:return:&nbsp;equal&nbsp;or&nbsp;not&nbsp;equal</tt></dd></dl>
+ <dl><dt><a name="-mod"><strong>mod</strong></a>(a)</dt><dd><tt>Modulus<br>
+&nbsp;<br>
+:param&nbsp;a:&nbsp;vector&nbsp;(a1,&nbsp;a2,&nbsp;a3)<br>
+:return:&nbsp;modulus&nbsp;(a1**2+a2**2+a3**2)**(1/2)</tt></dd></dl>
+ <dl><dt><a name="-mult"><strong>mult</strong></a>(a, scalar)</dt><dd><tt>Multiplication&nbsp;of&nbsp;vector&nbsp;by&nbsp;scalar<br>
+&nbsp;<br>
+:param&nbsp;a:&nbsp;vector&nbsp;(a1,&nbsp;a2,&nbsp;a3)<br>
+:param&nbsp;scalar:&nbsp;scalar&nbsp;factor<br>
+:return:&nbsp;scaled&nbsp;vector&nbsp;(a1*scalar,&nbsp;a2*scalar,&nbsp;a3*scalar)</tt></dd></dl>
+ <dl><dt><a name="-sqmod"><strong>sqmod</strong></a>(a)</dt><dd><tt>Square&nbsp;modulus<br>
+&nbsp;<br>
+:param&nbsp;a:&nbsp;vector&nbsp;(a1,&nbsp;a2,&nbsp;a3)<br>
+:return:&nbsp;square&nbsp;modulus&nbsp;a1**2+a2**2+a3**2</tt></dd></dl>
+ <dl><dt><a name="-sub"><strong>sub</strong></a>(a, b)</dt><dd><tt>Vector&nbsp;subtraction<br>
+&nbsp;<br>
+:param&nbsp;a:&nbsp;first&nbsp;vector&nbsp;(a1,&nbsp;a2,&nbsp;a3)<br>
+:param&nbsp;b:&nbsp;second&nbsp;vector&nbsp;(b1,&nbsp;b2,&nbsp;b3)<br>
+:return:&nbsp;vector&nbsp;a&nbsp;-&nbsp;vector&nbsp;b</tt></dd></dl>
+ <dl><dt><a name="-sum"><strong>sum</strong></a>(a, b)</dt><dd><tt>Vector&nbsp;addition<br>
+&nbsp;<br>
+:param&nbsp;a:&nbsp;first&nbsp;vector&nbsp;(a1,&nbsp;a2,&nbsp;a3)<br>
+:param&nbsp;b:&nbsp;second&nbsp;vector&nbsp;(b1,&nbsp;b2,&nbsp;b3)<br>
+:return:&nbsp;vector&nbsp;sum&nbsp;a+b</tt></dd></dl>
+</td></tr></table>
+</body></html>
